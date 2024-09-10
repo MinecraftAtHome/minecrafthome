@@ -12,8 +12,7 @@
         <name>x86_64-apple-darwin</name>
         <user_friendly_name>Intel 64-bit Mac OS 10.5 or later</user_friendly_name>
     </platform>
-    </platform>
-        <platform>
+    <platform>
         <name>arm64-apple-darwin</name>
         <user_friendly_name>Mac OS running on ARM64 (Apple Silicon)</user_friendly_name>
     </platform>
