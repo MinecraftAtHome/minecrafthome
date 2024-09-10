@@ -22,6 +22,10 @@
         <user_friendly_name>Linux running on an aarch64 CPU</user_friendly_name>
     </platform>
     <platform>
+        <name>aarch64-android-linux-gnu</name>
+        <user_friendly_name> Android running on ARM 64-bit arm64-v8a</user_friendly_name>
+    </platform>
+    <platform>
         <name>anonymous</name>
         <user_friendly_name>anonymous</user_friendly_name>
     </platform>
@@ -52,5 +56,9 @@
     <app>
         <name>hdwgh</name>
         <user_friendly_name>How Did We Get Here SSG</user_friendly_name>
+    </app>
+    <app>
+        <name>pano121</name>
+        <user_friendly_name>1.21 Panorama Trial Chamber Cracker</user_friendly_name>
     </app>
 </boinc>

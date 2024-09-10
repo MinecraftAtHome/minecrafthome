@@ -1,0 +1,23 @@
+<version>
+  <file>
+    <physical_name>wrapper_26018_1.00_aarch64-android-linux-gnu.bin</physical_name>
+    <copy_file/>
+    <main_program/>
+  </file>
+  <file>
+    <physical_name>pano121_1.00.jar</physical_name>
+    <copy_file/>
+    <logical_name>pano121.jar</logical_name>
+  </file>
+  <file>
+    <physical_name>java8_1.00_aarch64-android-linux-gnu.zip</physical_name>
+    <copy_file/>
+    <logical_name>java.zip</logical_name>
+  </file>
+  <file>
+    <physical_name>pano121_job_1.00_aarch64-unknown-linux-gnu.xml</physical_name>
+    <copy_file/>
+    <logical_name>job.xml</logical_name>
+  </file>
+  <is_wrapper/>
+</version>
