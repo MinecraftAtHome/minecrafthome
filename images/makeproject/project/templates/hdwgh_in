@@ -1,0 +1,13 @@
+<input_template>
+    <file_info>
+    </file_info>
+    <workunit>
+        <file_ref>
+            <open_name>ssvFastionEndCityShipSeedsWithCoords.txt</open_name>
+            <copy_file/>
+        </file_ref>
+        <rsc_fpops_est>2.91e18</rsc_fpops_est>
+        <rsc_fpops_bound>2.8e22</rsc_fpops_bound>
+        <delay_bound>1209600</delay_bound>
+    </workunit>
+</input_template>

@@ -118,6 +118,7 @@
         </task>
     </tasks>
     <daemons>
+        <!-- Critical Daemons-->
         <daemon>
             <cmd>feeder --priority_order_create_time --allapps -d 3</cmd>
         </daemon>
@@ -127,60 +128,17 @@
         <daemon>
             <cmd>file_deleter -d 3</cmd>
         </daemon>
+        <!-- Assimilators -->
         <daemon>
-            <cmd>script_validator --app kaktwoos -d 3 --init_script dummy_script.py --compare_script "kaktwoos_validator_compare.py result_id result_id2"</cmd>
-            <pid_file>kaktwoos</pid_file>
-            <output>kaktwoos</output>
+            <cmd>hdwgh_assimilator.py -app hdwgh -d 3</cmd>
+            <pid_file>hdwgh_assimilator</pid_file>
+            <output>hdwgh_assimilator</output>
         </daemon>
+        <!-- Validators-->
         <daemon>
-            <cmd>sample_substr_validator --app panorama --stderr_string "Finished work unit"</cmd>
-            <pid_file>panorama</pid_file>
-            <output>panorama</output>
-        </daemon>
-        <daemon>
-            <cmd>script_validator --app kaktoos -d 3 --init_script dummy_script.py --compare_script kaktoos_validator_compare.py </cmd>
-            <pid_file>kaktoos</pid_file>
-            <output>kaktoos</output>
-        </daemon>
-        <daemon>
-            <cmd>script_validator --app trailertcrack -d 3 --init_script dummy_script.py --compare_script trailertcrack_validator.py </cmd>
-            <pid_file>trailertcrack</pid_file>
-            <output>trailertcrack</output>
-        </daemon>
-        <daemon>
-            <cmd>kaktoos_assimilator.py -app kaktoos -d 3</cmd>
-            <pid_file>kaktoos_assimilator</pid_file>
-            <output>kaktoos_assimilator</output>
-        </daemon>
-        <daemon>
-            <cmd>kaktwoos_assimilator.py -app kaktwoos -d 3</cmd>
-            <pid_file>kaktwoos_assimilator</pid_file>
-            <output>kaktwoos_assimilator</output>
-        </daemon>
-        <daemon>
-            <cmd>packcrack_assimilator.py -app packcrack -d 3</cmd>
-            <pid_file>packcrack_assimilator</pid_file>
-            <output>packcrack_assimilator</output>
-        </daemon>
-        <daemon>
-            <cmd>onechunk_assimilator.py -app onechunk -d 3</cmd>
-            <pid_file>onechunk_assimilator</pid_file>
-            <output>onechunk_assimilator</output>
-        </daemon>
-        <daemon>
-            <cmd>trailertcrack_assimilator.py -app trailertcrack -d 3</cmd>
-            <pid_file>trailertcrack_assimilator</pid_file>
-            <output>trailertcrack_assimilator</output>
-        </daemon>
-        <daemon>
-            <cmd>script_validator --app packcrack -d 3 --init_script dummy_script.py --compare_script kaktoos_validator_compare.py </cmd>
-            <pid_file>packcrack</pid_file>
-            <output>packcrack</output>
-        </daemon>
-        <daemon>
-            <cmd>script_validator --app onechunk -d 3 --credit_from_wu --init_script dummy_script.py --compare_script onechunk_validator.py </cmd>
-            <pid_file>onechunk</pid_file>
-            <output>onechunk</output>
+            <cmd>script_validator --app hdwgh -d 3 --credit_from_wu --init_script dummy_script.py --compare_script hdwgh_validator.py </cmd>
+            <pid_file>hdwgh</pid_file>
+            <output>hdwgh</output>
         </daemon>
     </daemons>
 </boinc>
