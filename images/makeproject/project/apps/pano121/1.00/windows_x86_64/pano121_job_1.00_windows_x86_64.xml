@@ -6,6 +6,7 @@
         <checkpoint_filename>boincpoint</checkpoint_filename>
         <fraction_done_filename>boinc_frac</fraction_done_filename>
         <command_line>-jar pano121.jar</command_line>
+        <append_cmdline_args/>
     </task>
     <unzip_input>
         <zipfilename>java.zip</zipfilename>
