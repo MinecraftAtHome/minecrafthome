@@ -1,0 +1,23 @@
+<version>
+  <file>
+    <physical_name>hdwgh_1.053_aarch64-unknown-linux-gnu</physical_name>
+    <copy_file/>
+    <main_program/>
+  </file>
+  <file>
+    <physical_name>HDWGHSeedFinding_1.053_aarch64-unknown-linux-gnu.jar</physical_name>
+    <copy_file/>
+    <logical_name>HDWGHSeedFinding-all.jar</logical_name>
+  </file>
+  <file>
+    <physical_name>hdwgh_java_1.053_aarch64-unknown-linux-gnu.zip</physical_name>
+    <copy_file/>
+    <logical_name>java.zip</logical_name>
+  </file>
+  <file>
+    <physical_name>job_1.053_aarch64-unknown-linux-gnu.xml</physical_name>
+    <copy_file/>
+    <logical_name>job.xml</logical_name>
+  </file>
+  <is_wrapper/>
+</version>
