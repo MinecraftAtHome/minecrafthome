@@ -15,7 +15,7 @@
     <logical_name>java.zip</logical_name>
   </file>
   <file>
-    <physical_name>pano121_job_1.00_aarch64-unknown-linux-gnu.xml</physical_name>
+    <physical_name>pano121_1.00_aarch64-android-linux-gnu.xml</physical_name>
     <copy_file/>
     <logical_name>job.xml</logical_name>
   </file>
