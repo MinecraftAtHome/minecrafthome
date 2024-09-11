@@ -1,11 +1,102 @@
-FROM boinc/server_apache:4.1.0-b2d@sha256:ed9e0e914bdc917b76da1cd1c246b9e492b3474108c96265dfdac15384fa43df
+# the tag this Dockerfile will build, either "-b2d" or ""
+ARG TAG
+
+#=====================================
+FROM php:7.3.33-apache-buster AS base
+#=====================================
+
+#https://github.com/marius311/boinc-server-docker/blob/26d4d727810ed8552f45b92625738cf3a295ffa1/images/apache/Dockerfile
+LABEL maintainer="Marius Millea <mariusmillea@gmail.com>"
+
+# install packages
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        cron \
+        default-mysql-client \
+        inotify-tools \
+        libjpeg62-turbo-dev \
+        libpng-dev \
+        libmariadb3 \
+        libmariadbclient-dev \
+        nano \
+        openssl \
+        python \
+        rsyslog \
+        supervisor \
+        vim-tiny \
+        wget \
+    && wget https://github.com/bobthecow/psysh/releases/download/v0.10.9/psysh-v0.10.9.tar.gz -O - | tar xz -C /usr/bin \
+    && chmod +x /usr/bin/psysh \
+    && rm -rf /var/lib/apt/lists
+#lib
+RUN ln -s /usr/lib/x86_64-linux-gnu/libmariadbclient.so /usr/lib/x86_64-linux-gnu/libmariadbclient.so.18
+
+# configure server
+RUN docker-php-ext-install mysqli \
+    && docker-php-ext-configure gd --with-jpeg-dir=/usr/include/ \
+    && docker-php-ext-install gd \
+    && a2enmod cgi
+
+# logrotate
+COPY --chown=1000:1000 logrotate /etc/logrotate.d/boincserver
+RUN chmod 644 /etc/logrotate.d/boincserver
+
+# set up supervisor to run
+COPY makeproject-step3.sh /usr/bin/
+COPY supervisord.conf /etc/supervisor/conf.d/
+CMD ["/usr/bin/supervisord"]
+
+
+
+#====================
+FROM base AS base-b2d
+#====================
+
+# install Docker client
+RUN curl -L http://get.docker.com/builds/Linux/x86_64/docker-1.10.3 > /usr/bin/docker \
+    && chmod +x /usr/bin/docker
+
+
+
+#======================
+FROM base$TAG AS apache
+#======================
+
+# everything which depends on build-args is done as ONBUILD in this stage, so
+# the user can customize it
+
+ONBUILD ARG BOINC_USER
+ONBUILD ARG PROJECT_ROOT
+ONBUILD ENV BOINC_USER=$BOINC_USER \
+            PROJECT_ROOT=$PROJECT_ROOT \
+            USER=$BOINC_USER \
+            HOME=/home/$BOINC_USER \
+            MYSQL_HOST=mysql
+
+# set up the non-root user who runs the dameons
+ONBUILD RUN adduser $BOINC_USER --disabled-password --gecos ""
+
+# so that www-data can read/write boinc server files
+ONBUILD RUN adduser www-data $BOINC_USER
+
+# ensure the project volumes have the right permissions when mounted
+ONBUILD RUN mkdir $PROJECT_ROOT && chown $BOINC_USER:$BOINC_USER $PROJECT_ROOT
+
+ONBUILD WORKDIR $PROJECT_ROOT
+
+
+#================================
+FROM apache AS apache-defaultargs
+#================================
+
+# this triggers the ONBUILD directives using the default ARGs so we also get a
+# fully built example image
+#FROM boinc/server_apache:4.1.0-b2d@sha256:ed9e0e914bdc917b76da1cd1c246b9e492b3474108c96265dfdac15384fa43df
 
 COPY --chown=1000 makeproject-step3.sh /usr/bin
 
 # Install additional dependencies
-RUN rm /etc/apt/sources.list && \
-    echo "deb http://archive.debian.org/debian/ stretch contrib main non-free" >> /etc/apt/sources.list && \
-    apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y \
     python-mysqldb \
         tree \
  && rm -rf /var/lib/apt/lists/* \
