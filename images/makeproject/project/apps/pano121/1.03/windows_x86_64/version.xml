@@ -1,0 +1,23 @@
+<version>
+  <file>
+    <physical_name>wrapper_26016_1.03_windows_x86_64.exe</physical_name>
+    <copy_file/>
+    <main_program/>
+  </file>
+  <file>
+    <physical_name>pano121_1.03.jar</physical_name>
+    <copy_file/>
+    <logical_name>pano121.jar</logical_name>
+  </file>
+  <file>
+    <physical_name>java21_1.03_windows_x86_64.zip</physical_name>
+    <copy_file/>
+    <logical_name>java.zip</logical_name>
+  </file>
+  <file>
+    <physical_name>pano121_job_1.03_windows_x86_64.xml</physical_name>
+    <copy_file/>
+    <logical_name>job.xml</logical_name>
+  </file>
+  <is_wrapper/>
+</version>

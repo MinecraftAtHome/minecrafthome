@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 from assimilator import *
 from Boinc import boinc_project_path
 import re, os
