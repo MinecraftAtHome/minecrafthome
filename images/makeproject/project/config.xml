@@ -22,6 +22,9 @@
         <host>${project}</host>
         <db_name>${project}</db_name>
         <shmem_key>0x1111930f</shmem_key>
+        <shmem_work_items>10000</shmem_work_items>
+        <feeder_query_size>20000</feeder_query_size>
+        <max_ncpus>384</max_ncpus>
         <show_results>1</show_results>
         <key_dir>/home/boincadm/project/keys/</key_dir>
         <dont_generate_upload_certificates>1</dont_generate_upload_certificates>
@@ -31,7 +34,7 @@
         <db_passwd>${db_passwd}</db_passwd>
         <min_sendwork_interval>6</min_sendwork_interval>
         <db_host>mysql</db_host>
-        <daily_result_quota>500</daily_result_quota>
+        <daily_result_quota>10000</daily_result_quota>
         <one_result_per_user_per_wu/>
         <one_result_per_host_per_wu/>
         <max_wus_in_progress>8</max_wus_in_progress>
