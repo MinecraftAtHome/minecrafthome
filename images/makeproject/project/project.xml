@@ -60,4 +60,8 @@
         <name>pano121</name>
         <user_friendly_name>1.21 Panorama Trial Chamber Cracker</user_friendly_name>
     </app>
+    <app>
+        <name>loneseed</name>
+        <user_friendly_name>1.20 Find seeds with zero villages within a radius</user_friendly_name>
+    </app>
 </boinc>
