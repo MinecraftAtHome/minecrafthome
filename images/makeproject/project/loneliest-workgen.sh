@@ -1,6 +1,5 @@
 #!/bin/bash
 
-#command_line has the --device flag to trick the wrapper into passing args to the child app
 for i in {0..262143}; do
 wu_name="loneseed_1.00_$i"
   echo "create_work: ${wu_name}"
