@@ -1,15 +1,15 @@
 <version>
   <file>
-    <physical_name>xoroshigo-wrapper-linux_1.03.bin</physical_name>
+    <physical_name>xoroshigo-wrapper-linux_1.04.bin</physical_name>
     <main_program/>
   </file>
   <file>
-    <physical_name>xoroshigo_job_1.03_x86_64-pc-linux-gnu.xml</physical_name>
+    <physical_name>xoroshigo_job_1.04_x86_64-pc-linux-gnu.xml</physical_name>
     <copy_file/>
     <logical_name>job.xml</logical_name>
   </file>
   <file>
-    <physical_name>xoroshigo-client-linux_1.03.bin</physical_name>
+    <physical_name>xoroshigo-client-linux_1.04.bin</physical_name>
     <copy_file/>
     <logical_name>client-linux.bin</logical_name>
   </file>
