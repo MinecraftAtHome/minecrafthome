@@ -23,7 +23,7 @@ class MCAtHAssimilator(Assimilator):
                     except OSError:
                         pass
 
-                    lines = set()
+                    lines = list()
                     input_lines = input_str.splitlines()
                     config_filename = input_lines[2].split(' ')[0]
                     config_name = config_filename[0:len(config_filename)-4]

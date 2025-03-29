@@ -6,10 +6,10 @@ for i in {0..10000}; do
     bin/create_work --appname xoroshigo \
         --wu_template templates/xoroshigo_in \
         --result_template templates/xoroshigo_out \
-        --command_line "--device \"0 config-001-hixorlo-fullinfo-rank100.npz 1500000 $i input.npz\"" \
+        --command_line "--device \"config-001-hixorlo-fullinfo-rank100.npz 1500000 $i input.npz\"" \
         --wu_name "${wu_name}" \
         --min_quorum 2 \
-        --credit 2500 \
+        --credit 5000 \
     config-001-hixorlo-fullinfo-rank100.npz 
 
 done
