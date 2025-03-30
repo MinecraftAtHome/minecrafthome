@@ -9,7 +9,6 @@ for i in {0..10000}; do
         --command_line "--device \"config-001-hixorlo-fullinfo-rank100.npz 1500000 $i input.npz\"" \
         --wu_name "${wu_name}" \
         --min_quorum 2 \
-        --credit 5000 \
-    config-001-hixorlo-fullinfo-rank100.npz 
+        --credit 5000
 
 done

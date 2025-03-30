@@ -1,5 +1,7 @@
 <input_template>
     <file_info>
+        <physical_name>config-001-hixorlo-fullinfo-rank100-genfix.npz</physical_name>
+        <no_delete/>
     </file_info>
     <workunit>
         <file_ref>
