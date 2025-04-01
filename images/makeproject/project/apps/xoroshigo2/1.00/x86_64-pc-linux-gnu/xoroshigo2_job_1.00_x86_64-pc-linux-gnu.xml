@@ -1,0 +1,10 @@
+<job_desc>
+    <task>
+        <application>./client-linux.bin</application>
+        <stdout_filename>stdout_file</stdout_filename>
+        <stderr_filename>stderr_file</stderr_filename>
+        <checkpoint_filename>checkpoint.npz</checkpoint_filename>
+        <fraction_done_filename>boinc_frac</fraction_done_filename>
+        <append_cmdline_args/>
+    </task>
+</job_desc>

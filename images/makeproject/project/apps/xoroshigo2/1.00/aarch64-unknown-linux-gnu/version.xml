@@ -1,0 +1,16 @@
+<version>
+  <file>
+    <physical_name>xoroshigo2_wrapper_1.00_aarch64-unknown-linux-gnu.bin</physical_name>
+    <main_program/>
+  </file>
+  <file>
+    <physical_name>xoroshigo2_job_1.00_aarch64-unknown-linux-gnu.xml</physical_name>
+    <copy_file/>
+    <logical_name>job.xml</logical_name>
+  </file>
+  <file>
+    <physical_name>xoroshigo2_client_1.00_aarch64-unknown-linux-gnu.bin</physical_name>
+    <copy_file/>
+    <logical_name>client-linux-arm64.bin</logical_name>
+  </file>
+</version>
