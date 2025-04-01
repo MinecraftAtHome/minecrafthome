@@ -45,7 +45,7 @@ jobs:
         id: run_script
         run: |
          python3 ci_tools/exeecutable-check.py > output_bin.txt
-        echo "::set-output name=failed_bin::$(grep -c " - " output_bin.txt)"
+         echo "::set-output name=failed_bin::$(grep -c " - " output_bin.txt)"
         env:
         # Replace with the directory you want to check
           DIRECTORY_TO_CHECK: images/makeproject/project/bin
