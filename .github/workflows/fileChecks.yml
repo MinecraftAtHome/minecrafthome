@@ -28,8 +28,8 @@ jobs:
       - name: Check apps
         id: run_script
         run: |
-        python3 ci_tools/exeecutable-check.py > output_apps.txt
-        echo "::set-output name=failed_apps::$(grep -c " - " output_apps.txt)"
+          python3 ci_tools/exeecutable-check.py > output_apps.txt
+          echo "::set-output name=failed_apps::$(grep -c " - " output_apps.txt)"
         env:
         # Replace with the directory you want to check
           DIRECTORY_TO_CHECK: images/makeproject/project/apps
