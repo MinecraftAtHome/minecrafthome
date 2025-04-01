@@ -56,13 +56,13 @@ jobs:
       id: run_xml_check_script
       run: |
         python3 ci_tools/version-xml-check.py > output_xml.txt
-        echo "failed_apps=$(grep -c " - " output_apps.txt)" >> $GITHUB_ENV
+        echo "failed_xml=$(grep -c " - " output_xml.txt)" >> $GITHUB_ENV
       env:
         # Replace with the directory you want to check
         DIRECTORY_TO_CHECK: images/makeproject/project/apps
 
     - name: Check for failed files
-      if: ${{ env.failed_apps != '0' }} 
+      if: ${{ env.failed_xml != '0' }} 
       run: |
         echo "::error title=Version mismatch::Found xml files with mismatched version number from parent directory.  See output for details."
         cat output.txt
@@ -70,5 +70,5 @@ jobs:
  
 
     - name: Success (if no failed files)
-      if: ${{ env.failed_apps == '0' }} 
+      if: ${{ env.failed_xml == '0' }} 
       run: echo "All version.xml files look correct (or we did not find any)."
