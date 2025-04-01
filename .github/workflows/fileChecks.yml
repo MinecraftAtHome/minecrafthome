@@ -11,53 +11,53 @@ jobs:
     name: executables-filecheck
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Checkout code
+      - uses: actions/checkout@v4
+      - name: Checkout code
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x' # Or your preferred Python version
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x' # Or your preferred Python version
  
 
-    - name: Install dependencies (if any)
-      run: |
-        python3 -m pip install --upgrade pip
+      - name: Install dependencies (if any)
+        run: |
+          python3 -m pip install --upgrade pip
  
 
-    - name: Check apps
-      id: run_script
-      run: |
-       python3 ci_tools/exeecutable-check.py > output_apps.txt
-       echo "::set-output name=failed_apps::$(grep -c " - " output_apps.txt)"
-      env:
-      # Replace with the directory you want to check
-        DIRECTORY_TO_CHECK: images/makeproject/project/apps
+      - name: Check apps
+        id: run_script
+        run: |
+        python3 ci_tools/exeecutable-check.py > output_apps.txt
+        echo "::set-output name=failed_apps::$(grep -c " - " output_apps.txt)"
+        env:
+        # Replace with the directory you want to check
+          DIRECTORY_TO_CHECK: images/makeproject/project/apps
 
-    - name: Check for failed files
-      if: steps.run_script.outputs.failed_apps != '0'
-      run: |
-        echo "::error title=Missing executable permissions::Found .bin files without executable permissions.  See output for details."
-        cat output.txt
-        exit 1
+      - name: Check for failed files
+        if: steps.run_script.outputs.failed_apps != '0'
+        run: |
+          echo "::error title=Missing executable permissions::Found .bin files without executable permissions.  See output for details."
+          cat output.txt
+          exit 1
 
-    - name: Check bin
-      id: run_script
-      run: |
-       python3 ci_tools/exeecutable-check.py > output_bin.txt
-       echo "::set-output name=failed_bin::$(grep -c " - " output_bin.txt)"
-      env:
-      # Replace with the directory you want to check
-        DIRECTORY_TO_CHECK: images/makeproject/project/bin
+      - name: Check bin
+        id: run_script
+        run: |
+         python3 ci_tools/exeecutable-check.py > output_bin.txt
+        echo "::set-output name=failed_bin::$(grep -c " - " output_bin.txt)"
+        env:
+        # Replace with the directory you want to check
+          DIRECTORY_TO_CHECK: images/makeproject/project/bin
 
-    - name: Check for failed files
-      if: steps.run_script.outputs.failed_bin != '0'
-      run: |
-        echo "::error title=Missing executable permissions::Found .bin files without executable permissions.  See output for details."
-        cat output.txt
-        exit 1
+      - name: Check for failed files
+        if: steps.run_script.outputs.failed_bin != '0'
+        run: |
+          echo "::error title=Missing executable permissions::Found .bin files without executable permissions.  See output for details."
+          cat output.txt
+          exit 1
  
 
-    - name: Success (if no failed files)
-      if: steps.run_script.outputs.failed_files == '0'
-      run: echo "All .bin files have executable permissions (or no .bin files found)."
+      - name: Success (if no failed files)
+        if: steps.run_script.outputs.failed_files == '0'
+        run: echo "All .bin files have executable permissions (or no .bin files found)."
