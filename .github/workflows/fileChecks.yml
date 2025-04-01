@@ -20,7 +20,7 @@ jobs:
  
 
     - name: Check apps
-      id: run_script
+      id: run_script_apps
       run: |
         python3 ci_tools/exeecutable-check.py > output_apps.txt
         echo "::set-output name=failed_apps::$(grep -c " - " output_apps.txt)"
@@ -36,7 +36,7 @@ jobs:
         exit 1
 
     - name: Check bin
-      id: run_script
+      id: run_script_bin
       run: |
        python3 ci_tools/exeecutable-check.py > output_bin.txt
        echo "::set-output name=failed_bin::$(grep -c " - " output_bin.txt)"
