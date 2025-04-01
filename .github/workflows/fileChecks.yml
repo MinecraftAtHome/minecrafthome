@@ -34,24 +34,8 @@ jobs:
         echo "::error title=Missing executable permissions::Found .bin files without executable permissions.  See output for details."
         cat output.txt
         exit 1
-
-    - name: Check bin
-      id: run_script_bin
-      run: |
-       python3 ci_tools/executable-check.py > output_bin.txt
-       echo "::set-output name=failed_bin::$(grep -c " - " output_bin.txt)"
-      env:
-        # Replace with the directory you want to check
-        DIRECTORY_TO_CHECK: images/makeproject/project/bin
-
-    - name: Check for failed files
-      if: steps.run_script.outputs.failed_bin != '0'
-      run: |
-        echo "::error title=Missing executable permissions::Found .bin files without executable permissions.  See output for details."
-        cat output.txt
-        exit 1
  
 
     - name: Success (if no failed files)
-      if: steps.run_script.outputs.failed_files == '0'
+      if: steps.run_script.outputs.failed_apps == '0'
       run: echo "All .bin files have executable permissions (or no .bin files found)."

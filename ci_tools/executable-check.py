@@ -60,9 +60,6 @@ if __name__ == "__main__":
  
 
     if len(result) > 0:
-        print(
-        f"Failure: .bin file without executable permission found."
-        )
         for file in result:
             print(f" - {file}")
     else:
