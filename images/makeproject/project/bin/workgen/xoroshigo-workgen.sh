@@ -5,8 +5,8 @@ declare -i UPPER_BOUND=9999
 
 for file in ./xoroshigo_configs/*;
 do
-    STRIPPED_FILENAME=$(basename $file .npz)
-    FILENAME=$(basename $file)
+    STRIPPED_FILENAME=$(basename "$file" .npz)
+    FILENAME=$(basename "$file")
     echo "Staging file $file"
     bin/stage_file --verbose --copy "$file"
     #Conf2
@@ -14,9 +14,9 @@ do
         wu_name="xoroshigo_${WU_VERSION}_${STRIPPED_FILENAME}_${i}"
         echo "create_work: ${wu_name}"
         bin/create_work --appname xoroshigo2 \
-            --wu_template templates/xoroshigo_in_$STRIPPED_FILENAME \
+            --wu_template templates/xoroshigo_in_"$STRIPPED_FILENAME" \
             --result_template templates/xoroshigo_out \
-            --command_line "--passthrough_child $filename 30000000 $i input.npz" \
+            --command_line "--passthrough_child "$FILENAME" 30000000 $i input.npz" \
             --wu_name "${wu_name}" \
             --min_quorum 2 \
             --credit 5000
