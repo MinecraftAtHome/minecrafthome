@@ -16,7 +16,7 @@ do
         bin/create_work --appname xoroshigo2 \
             --wu_template templates/xoroshigo_in_"$STRIPPED_FILENAME" \
             --result_template templates/xoroshigo_out \
-            --command_line "--passthrough_child "$FILENAME" 30000000 $i input.npz" \
+            --command_line "--passthrough_child \"$FILENAME\" 30000000 $i input.npz" \
             --wu_name "${wu_name}" \
             --min_quorum 2 \
             --credit 5000
