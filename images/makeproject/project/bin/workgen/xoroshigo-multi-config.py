@@ -35,7 +35,7 @@ for i in range(LOWER_BOUND, UPPER_BOUND):
 
                 if result.returncode != 0:
                     print("Staging file failed, proceeding anyway.")
-                    wu_name=f"xoroshigo_{WU_VERSION}_{STRIPPED_FILENAME}_{i}"
+                wu_name=f"xoroshigo_{WU_VERSION}_{STRIPPED_FILENAME}_{i}"
 
                 print(f"create_work: {wu_name}")
                 cmd = [
