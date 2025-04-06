@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <input_template>
     <file_info>
-        <physical_name>config-007-hxlreg-fullinfo-rank005</physical_name>
+        <physical_name>config-007-hxlreg-fullinfo-rank005.npz</physical_name>
         <no_delete />
     </file_info>
     <workunit>
