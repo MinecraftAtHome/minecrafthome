@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<input_template>
+    <file_info>
+        <physical_name>config-010-hxlreg-fullinfo-rank020</physical_name>
+        <no_delete />
+    </file_info>
+    <workunit>
+        <file_ref>
+            <open_name>input.npz</open_name>
+            <copy_file />
+        </file_ref>
+        <rsc_fpops_est>2.91e13</rsc_fpops_est>
+        <rsc_fpops_bound>2.8e16</rsc_fpops_bound>
+        <delay_bound>259200</delay_bound>
+    </workunit>
+</input_template>
