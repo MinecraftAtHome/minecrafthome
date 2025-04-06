@@ -59,4 +59,4 @@ for filename in os.listdir(CONFIG_DIR):
                 xml_file = "templates/xoroshigo_in_TEMPLATE"
                 output_file = f"templates/xoroshigo_in_{STRIPPED_FILENAME}"
                 
-                replace_physical_name(xml_file, STRIPPED_FILENAME, output_file)
+                replace_physical_name(xml_file, FILENAME, output_file)
