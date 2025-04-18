@@ -8,6 +8,7 @@ import os
 WU_VERSION="2.07"
 LOWER_BOUND=0
 UPPER_BOUND=9999
+CONFIG_RANGE="0-100000"
 parser = argparse.ArgumentParser(description="Creatework for xoroshigo2 - single config")
 parser.add_argument("-l", "--lowerbound", type=int, help="Lower bound value")
 parser.add_argument("-u", "--upperbound", type=int, help="Upper bound value")

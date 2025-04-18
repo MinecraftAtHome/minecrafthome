@@ -1,0 +1,17 @@
+<version>
+  <file>
+    <physical_name>xoroshigo2_wrapper_1.05_x86_64-pc-linux-gnu.bin</physical_name>
+    <main_program/>
+  </file>
+  <file>
+    <physical_name>xoroshigo2_job_1.05_x86_64-pc-linux-gnu.xml</physical_name>
+    <copy_file/>
+    <logical_name>job.xml</logical_name>
+  </file>
+  <file>
+    <physical_name>xoroshigo2_client_1.05_x86_64-pc-linux-gnu.bin</physical_name>
+    <copy_file/>
+    <logical_name>client-linux.bin</logical_name>
+  </file>
+  
+</version>
