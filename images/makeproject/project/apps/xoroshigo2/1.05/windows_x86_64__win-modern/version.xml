@@ -9,7 +9,7 @@
     <logical_name>job.xml</logical_name>
   </file>
   <file>
-    <physical_name>xoroshigo2_client-windows_1.05_x86_64.exe</physical_name>
+    <physical_name>xoroshigo2_client_windows_1.05_x86_64.exe</physical_name>
     <copy_file/>
     <logical_name>client-windows.exe</logical_name>
   </file>
