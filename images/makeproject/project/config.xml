@@ -51,6 +51,7 @@
         <recaptcha_public_key>${RECAPTCHA_PUBLIC_KEY}</recaptcha_public_key>
         <recaptcha_private_key>${RECAPTCHA_PRIVATE_KEY}</recaptcha_private_key>
         <reliable_priority_on_over>15000</reliable_priority_on_over>
+        <credit_by_app/>
     </config>
     <tasks>
         <task>
@@ -130,6 +131,66 @@
         </daemon>
         <daemon>
             <cmd>file_deleter -d 3</cmd>
+        </daemon>
+        <daemon>
+            <cmd>db_purge --app kaktoos -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+        </daemon>
+        <daemon>
+            <cmd>db_purge --app kaktwoos -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+        </daemon>
+        <daemon>
+            <cmd>db_purge --app panorama -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+        </daemon>
+        <daemon>
+            <cmd>db_purge --app packcrack -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+        </daemon>
+         <daemon>
+            <cmd>db_purge --app onechunk -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+        </daemon>
+        <daemon>
+            <cmd>db_purge --app trailertcrack -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+        </daemon>
+        <daemon>
+            <cmd>db_purge --app hdwgh -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+        </daemon>
+        <daemon>
+            <cmd>db_purge --app pano121 -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+        </daemon>
+        <daemon>
+            <cmd>db_purge --app loneseed -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+        </daemon>
+        <daemon>
+            <cmd>db_purge --app xoroshigo -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+        </daemon>
+        <daemon>
+            <cmd>db_purge --app xoroshigo2 -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
+        </daemon>
+            <daemon>
+            <cmd>db_purge --app panopale -d 3 --gzip --max_wu_per_file 10000 --min_age_days 7 </cmd>
+            <pid_file>db_purge_1</pid_file>
+            <output>db_purge_1</output>
         </daemon>
         <!-- Assimilators -->
         <daemon>
