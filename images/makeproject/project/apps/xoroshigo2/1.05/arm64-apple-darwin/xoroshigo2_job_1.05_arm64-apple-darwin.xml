@@ -1,0 +1,11 @@
+<job_desc>
+    <task>
+        <application>./client-macos-universal.bin</application>
+        <stdout_filename>stdout.txt</stdout_filename>
+        <stderr_filename>stderr.txt</stderr_filename>
+        <checkpoint_filename>checkpoint.npz</checkpoint_filename>
+        <fraction_done_filename>boinc_frac</fraction_done_filename>
+        <append_cmdline_args/>
+        <multi_process/>
+    </task>
+</job_desc>

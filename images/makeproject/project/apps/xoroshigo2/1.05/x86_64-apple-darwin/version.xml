@@ -1,0 +1,16 @@
+<version>
+  <file>
+    <physical_name>xoroshigo2_wrapper_1.05_x86_64-apple-darwin.bin</physical_name>
+    <main_program/>
+  </file>
+  <file>
+    <physical_name>xoroshigo2_job_1.05_x86_64-apple-darwin.xml</physical_name>
+    <copy_file/>
+    <logical_name>job.xml</logical_name>
+  </file>
+  <file>
+    <physical_name>xoroshigo2_client_1.05_x86_64-apple-darwin.bin</physical_name>
+    <copy_file/>
+    <logical_name>client-macos-universal.bin</logical_name>
+  </file>
+</version>

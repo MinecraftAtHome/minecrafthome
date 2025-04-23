@@ -10,7 +10,7 @@
         </file_ref>
         <rsc_fpops_est>3.2e12</rsc_fpops_est>
         <rsc_fpops_bound>3.2e14</rsc_fpops_bound>
-        <delay_bound>43200</delay_bound>
+        <delay_bound>172800</delay_bound>
     </workunit>
 </input_template>
 
