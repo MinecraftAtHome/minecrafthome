@@ -1,12 +1,11 @@
 <job_desc>
     <task>
-        <application>./java/bin/java</application>
-        <checkpoint_filename>boincpoint</checkpoint_filename>
+        <application>./client-macos-universal.bin</application>
+        <stdout_filename>stdout.txt</stdout_filename>
+        <stderr_filename>stderr.txt</stderr_filename>
+        <checkpoint_filename>checkpoint.npz</checkpoint_filename>
         <fraction_done_filename>boinc_frac</fraction_done_filename>
-        <command_line>-jar pano121.jar</command_line>
         <append_cmdline_args/>
+        <multi_process/>
     </task>
-    <unzip_input>
-        <zipfilename>java.zip</zipfilename>
-    </unzip_input>
 </job_desc>
