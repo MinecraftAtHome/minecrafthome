@@ -1,0 +1,23 @@
+<version>
+  <file>
+    <physical_name>shbookfinder_wrapper_1.00_arm64-apple-darwin.bin</physical_name>
+    <copy_file/>
+    <main_program/>
+  </file>
+  <file>
+    <physical_name>shbookfinder_1.00_arm64-apple-darwin.jar</physical_name>
+    <copy_file/>
+    <logical_name>shbookfinder.jar</logical_name>
+  </file>
+  <file>
+    <physical_name>shbookfinder_java21_1.00_arm64-apple-darwin.zip</physical_name>
+    <copy_file/>
+    <logical_name>java.zip</logical_name>
+  </file>
+  <file>
+    <physical_name>shbookfinder_job_1.00_arm64-apple-darwin.xml</physical_name>
+    <copy_file/>
+    <logical_name>job.xml</logical_name>
+  </file>
+  <is_wrapper/>
+</version>

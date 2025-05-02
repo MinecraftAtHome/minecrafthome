@@ -1,0 +1,12 @@
+<job_desc>
+    <task>
+        <application>./java/bin/java</application>
+        <checkpoint_filename>boincpoint</checkpoint_filename>
+        <fraction_done_filename>boinc_frac</fraction_done_filename>
+        <command_line>-jar shbookfinder.jar</command_line>
+        <append_cmdline_args/>
+    </task>
+    <unzip_input>
+        <zipfilename>java.zip</zipfilename>
+    </unzip_input>
+</job_desc>
