@@ -76,4 +76,9 @@
         <name>panopale</name>
         <user_friendly_name>1.21.4 Pale Garden Panorama Cracker</user_friendly_name>
     </app>
+    <app>
+        <name>shbookfinder</name>
+        <user_friendly_name>Stronghold Bookfinder v1.0</user_friendly_name>
+    </app>
+
 </boinc>
