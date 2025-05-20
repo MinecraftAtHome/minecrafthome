@@ -7,7 +7,7 @@ import os
 
 CONFIG_RANGE = "0-100000"
 CONFIG_DIR = "./xoroshigo_config"
-WU_VERSION = "2.09"
+WU_VERSION = "2.10"
 LOWER_BOUND = 0
 UPPER_BOUND = 9999
 BATCH = 0
