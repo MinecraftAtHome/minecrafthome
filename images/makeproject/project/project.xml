@@ -80,5 +80,8 @@
         <name>shbookfinder</name>
         <user_friendly_name>Stronghold Bookfinder v1.0</user_friendly_name>
     </app>
-
+    <app>
+        <name>repeatdecor</name>
+        <user_friendly_name>Repeating decoration seeds v1</user_friendly_name>
+    </app>
 </boinc>

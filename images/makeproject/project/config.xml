@@ -170,6 +170,11 @@
             <pid_file>panopale_assimilator</pid_file>
             <output>panopale_assimilator</output>
         </daemon>
+        <daemon>
+            <cmd>repeatdecor_assimilator.py -app repeatdecor -d 3</cmd>
+            <pid_file>repeatdecor_assimilator</pid_file>
+            <output>repeatdecor_assimilator</output>
+        </daemon>
         <!-- Validators-->
         <daemon>
             <cmd>script_validator --app hdwgh -d 3 --credit_from_wu --init_script dummy_script.py --compare_script hdwgh_validator.py </cmd>
@@ -200,6 +205,11 @@
             <cmd>script_validator --app panopale -d 3 --credit_from_wu --init_script dummy_script.py --compare_script simple_validator.py </cmd>
             <pid_file>panopale_validator</pid_file>
             <output>panopale_validator</output>
+        </daemon>
+        <daemon>
+            <cmd>script_validator --app repeatdecor -d 3 --credit_from_wu --init_script dummy_script.py --compare_script simple_validator.py </cmd>
+            <pid_file>repeatdecor_validator</pid_file>
+            <output>repeatdecor_validator</output>
         </daemon>
     </daemons>
 </boinc>
