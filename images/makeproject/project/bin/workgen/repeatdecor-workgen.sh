@@ -6,7 +6,7 @@ wu_name="repeatdecor_1.00_$i"
   bin/create_work --appname repeatdecor \
     --wu_template templates/repeatdecor_in \
     --result_template templates/repeatdecor_out \
-    --command_line "--start $((i * 8796093022208)) --end $(((i + 1) * 8796093022208))" \
+    --command_line "-s $((i * 8796093022208)) -e $(((i + 1) * 8796093022208))" \
     --wu_name "${wu_name}" \
     --min_quorum 2 \
     --credit 50000
