@@ -9,6 +9,6 @@ wu_name="repeatdecor_1.00_$i"
     --command_line "-s $((i * 8796093022208)) -e $(((i + 1) * 8796093022208))" \
     --wu_name "${wu_name}" \
     --min_quorum 2 \
-    --credit 50000
+    --credit 10000
 
 done
