@@ -12,7 +12,7 @@ class panoPaleAssimilator(Assimilator):
                     if canonical_result == None:
                             return
 
-                    path = boinc_project_path.project_path("panopale_results")
+                    path = boinc_project_path.project_path("repeatdecor_results")
                     input_path = self.get_file_path(canonical_result)
 
                     with open(input_path) as input_file:
