@@ -1,0 +1,13 @@
+<version>
+  <file>
+    <physical_name>repeatdecor-cl_1.02_x86_64-pc-linux-gnu__opencl_intel_gpu.bin</physical_name>
+    <main_program/>
+    <copy_file/>
+  </file>
+  <file>
+    <physical_name>repeatdecor-cl_kernel_1.02_x86_64-pc-linux-gnu__opencl_intel.cl</physical_name>
+    <logical_name>kernel.cl</logical_name>
+    <copy_file/>
+  </file>
+  <beta/>
+</version>
