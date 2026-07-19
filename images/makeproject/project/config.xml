@@ -221,5 +221,10 @@
             <pid_file>diaveins_validator</pid_file>
             <output>diaveins_validator</output>
         </daemon>
+        <daemon>
+            <cmd>script_validator --app diaveins2 -d 3 --credit_from_wu --init_script dummy_script.py --compare_script simple_validator.py </cmd>
+            <pid_file>diaveins2_validator</pid_file>
+            <output>diaveins2_validator</output>
+        </daemon>
     </daemons>
 </boinc>
