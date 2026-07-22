@@ -9,6 +9,6 @@ wu_name="diaveins2_1.00_$i"
     --command_line "--start $((i * 4096)) --end $(((i + 1) * 4096))" \
     --wu_name "${wu_name}" \
     --min_quorum 2 \
-    --credit 20000
+    --credit 34000
 
 done
