@@ -88,4 +88,8 @@
         <name>diaveins</name>
         <user_friendly_name>1.21 Find large veins of diamond ore</user_friendly_name>
     </app>
+    <app>
+        <name>diaveins2</name>
+        <user_friendly_name>1.21 Find large veins of diamond ore (phase 2)</user_friendly_name>
+    </app>
 </boinc>
